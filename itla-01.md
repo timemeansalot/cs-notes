@@ -1,3 +1,3 @@
-# Introduction to Linear Algebra Chapter 1
+# Introduction to Linear Algebra Chapter 0
 
 
