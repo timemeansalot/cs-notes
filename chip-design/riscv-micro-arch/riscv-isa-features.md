@@ -2,11 +2,10 @@
 
 # RISC-V 指令集特点
 
-1. 6 种指令格式，全部 32 位
+1. 六种指令格式，全部 32 位
    ![risc-isa-types](/Users/fujie/Pictures/typora/riscv-micro-arch/riscv-isa-type.png)
 2. 指令里包含 3 个地址:dest, rs1, rs2，两地址的地址会导致更大的 code size，并且效率也更低
 3. 操作数在指令里的固定位置->方便解码
-4.
 
 # RV 32I
 
@@ -41,7 +40,7 @@
         `ORI`  
         `XORI`: 可以用来实现`NOT`: `NOT rd, rs1 <= XORI rd, sr1, -1`
         ![ADDI, SLTI, SLTIU](/Users/fujie/Pictures/typora/riscv-micro-arch/addi.jpg)
-     4. `SLLI`: shift left logical  
+     4. `SLLI`: shift left logical imm  
         `SRLI`: shift right logical imm  
         `SRAI`: shift right arithmatic imm
         ![SLLI, SRLI, SRAI](/Users/fujie/Pictures/typora/riscv-micro-arch/slli.jpg)
