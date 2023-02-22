@@ -2,7 +2,7 @@
 
 # Study Contents
 
-- [ ] lecture1-intro-afterlecture.pdf
+- [x] lecture1-intro-afterlecture.pdf
 - [ ] lecture2a-tradeoffs-metrics-mindset-afterlecture.pdf
 - [ ] lecture2b-mysteries-afterlecture.pdf
 - [ ] lecture3a-mysteries-ii-afterlecture.pdf
@@ -47,7 +47,17 @@
 
 # Study Notes
 ## lecture1-intro-afterlecture.pdf
+当前火热的体系结构研究话题有：
+1. data move vs data computation：数据移动的功耗已经远大于数据计算的功耗，一次load的功耗是add的功耗的上百到上千倍，因此出现了PIM(process in memory),PNM(process near memory)
+2. 数据安全问题：
+    - raw hammer：访问sram的时候，多次访问同一个word line会导致其相邻的word line的数据发生变化
+    - spectre：由于分支预测的时候会预测下一个pc的地址，在pc预测出错的时候，可能会导致敏感数据被载入到cache中<-在没有分支预测的情况下，敏感数据肯定是不会被载入到cache中的
+3. 基因测序genome sequencing
+
+> ABI(Application Binary Interface): In computer software, an application binary interface (ABI) is an interface between two binary program modules. Often, one of these modules is a library or operating system facility, and the other is a program that is being run by a user.
+
 
 # 参考资料
 
 1. [Digital Design and Computer Architecture Spring 2022](https://safari.ethz.ch/digitaltechnik/spring2022/doku.php?id=schedule) by [Onur Mutlu](https://people.inf.ethz.ch/omutlu/)
+2. [Application Binary Interface from Wikipedia](https://en.wikipedia.org/wiki/Application_binary_interface)
