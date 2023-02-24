@@ -44,18 +44,30 @@
 - [ ] problem-solving-iii-beforelecture.pdf
 - [ ] problem-solving-iv-beforelecture.pdf
 
-
 # Study Notes
-## lecture1-intro-afterlecture.pdf
+
+## Introduction Lectures
+
 当前火热的体系结构研究话题有：
-1. data move vs data computation：数据移动的功耗已经远大于数据计算的功耗，一次load的功耗是add的功耗的上百到上千倍，因此出现了PIM(process in memory),PNM(process near memory)
+
+1. data move vs data computation：数据移动的功耗已经远大于数据计算的功耗，一次 load 的功耗是 add 的功耗的上百到上千倍，因此出现了 PIM(process in memory),PNM(process near memory)
 2. 数据安全问题：
-    - raw hammer：访问sram的时候，多次访问同一个word line会导致其相邻的word line的数据发生变化
-    - spectre：由于分支预测的时候会预测下一个pc的地址，在pc预测出错的时候，可能会导致敏感数据被载入到cache中<-在没有分支预测的情况下，敏感数据肯定是不会被载入到cache中的
-3. 基因测序genome sequencing
+   - raw hammer：访问 sram 的时候，多次访问同一个 word line 会导致其相邻的 word line 的数据发生变化  
+     Rawhammer 解决办法: 增加刷新频率，导致功耗增加性能下降(苹果的做法)；根据生产 SRAM 的规矩，对脆弱的行刷新频繁，对稳健的行刷新不频繁，需要额外用 2kB 的存储来存储 32GB 的 SRAM 信息；用 bloom filter 来估计哪些行是脆弱的，bloom 说某一个集合不存在脆弱的行，则其一定不存在
+   - spectre：由于分支预测的时候会预测下一个 pc 的地址，在 pc 预测出错的时候，可能会导致敏感数据被载入到 cache 中<-在没有分支预测的情况下，敏感数据肯定是不会被载入到 cache 中的
+3. 基因测序 genome sequencing
+4. 多核系统性能不如预期，因为多核需要一起访问SRAM，因此SRAM会成为瓶颈，可能导致某些核的访问出现饥饿
 
 > ABI(Application Binary Interface): In computer software, an application binary interface (ABI) is an interface between two binary program modules. Often, one of these modules is a library or operating system facility, and the other is a program that is being run by a user.
-
+### FPGA(Field Programmable Gate Array)
+1. Software Reconfigurable:
+    - functions
+    - connections
+    - IOs
+2. key parts of FPGA
+    - LUT(look up table)
+    - Switch(interconnect)
+    
 
 # 参考资料
 
