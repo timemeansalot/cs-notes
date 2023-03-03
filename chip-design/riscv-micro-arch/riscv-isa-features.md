@@ -109,10 +109,14 @@
      ![ECALL](/Users/fujie/Pictures/typora/riscv-micro-arch/ecall.jpg)
 
 ## Conclusion
+
 ![rv32i reference and encoding](/Users/fujie/Pictures/typora/riscv-micro-arch/rv32-isa-reference-and-encoding.jpg)
+
+![instructions_and_control_signals](/Users/fujie/Pictures/typora/riscv-micro-arch/instructions_and_control_signals.png)
+![rv32I-referenceCards](rv32I-referenceCards.jpg)
+
 # References
 
 1. [RV32I Base Integer Instruction Set, Version 2.1](https://five-embeddev.com/riscv-isa-manual/latest/rv32.html#)
 2. [RISC-V Official Specifications](https://riscv.org/technical/specifications/)
 3. [RISC-V Assemble Language Programming](https://github.com/johnwinans/rvalp)
-
